@@ -1,0 +1,182 @@
+/* ==========================================================
+   BOUTON PANIER FLOTTANT
+   ========================================================== */
+.cart-floating-btn {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background-color: #f5f5dc;
+    color: #5d4037;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    z-index: 1000;
+    text-decoration: none;
+    font-size: 24px;
+    transition: all 0.3s ease; /* Centralisé ici */
+}
+
+.cart-floating-btn:hover {
+    background-color: #e5e5cc;
+    transform: scale(1.1);
+}
+
+/* ==========================================================
+   BARRE DE NAVIGATION (NAVBAR)
+   ========================================================== */
+.navbar {
+    background-color: #e3bc8e !important; /* Ta couleur signature */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.navbar-brand img {
+    height: 80px; /* Ajuste une fois ici pour tout le site */
+    width: auto;
+    object-fit: contain;
+}
+
+/* Style des liens de navigation */
+.nav-link.active {
+    font-weight: bold !important;
+    color: #5d4037 !important;
+}
+
+.nav-link:hover {
+    color: #8d6e63 !important;
+    transform: translateY(-2px);
+    transition: all 0.2s ease;
+}
+
+/* Barre de recherche style "Pilule" */
+.navbar .form-control {
+    border-radius: 25px;
+    border: 1px solid #d7ccc8;
+    padding-left: 20px;
+}
+
+.navbar .form-control:focus {
+    border-color: #5d4037;
+    box-shadow: 0 0 0 0.25rem rgba(93, 64, 55, 0.25);
+    outline: none;
+}
+
+/* Bouton Rechercher */
+.navbar .btn-outline-success { 
+    border-radius: 25px;
+    border: 2px solid #5d4037;
+    color: #5d4037;
+    font-weight: bold;
+    margin-left: 10px;
+}
+
+.navbar .btn-outline-success:hover {
+    background-color: #5d4037;
+    color: #f5f5dc;
+}
+
+/* Icône Profil */
+.icon-auth {
+    font-size: 2.5rem; /* Aligné avec la demande précédente */
+    color: #5d4037 !important;
+    transition: all 0.2s ease;
+}
+
+.icon-auth:hover {
+    color: #8d6e63 !important;
+    transform: scale(1.1);
+}
+
+/* ==========================================================
+   COMPOSANTS DU MENU (POUR TES COLLABORATEURS)
+   ========================================================== */
+.card {
+    border: none;
+    border-radius: 15px;
+    transition: transform 0.3s ease;
+    background-color: #ffffff;
+    overflow: hidden; /* Assure que l'image ne dépasse pas des bords arrondis */
+}
+
+.card:hover {
+    transform: translateY(-10px);
+}
+
+.card-img-top {
+    height: 200px;
+    object-fit: cover;
+}
+
+.btn-marron {
+    background-color: #5d4037;
+    color: #f5f5dc;
+    border-radius: 20px;
+    border: none;
+    padding: 8px 20px;
+}
+
+/* ==========================================================
+   FOOTER & UTILITAIRES
+   ========================================================== */
+.main-footer {
+    background-color: #e3bc8e;
+    margin-top: 3rem;
+    padding: 3rem 0;
+}
+
+.footer-title {
+    color: #000;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 1.5rem;
+    font-size: 1.1rem;
+}
+
+.d-none-important {
+    display: none !important;
+}
+/* Style du Logo séparé */
+.logo-area {
+    padding: 10px;
+    background-color: white; /* On assume que le fond du logo est blanc */
+    border-radius: 135px;      /* Optionnel : arrondir les coins du bloc logo */
+    box-shadow: 0 4px 10px rgb(255, 255, 255);
+}
+
+.custom-logo {
+    height: 270px; /* Ici tu peux agrandir ton logo comme tu veux ! */
+    width: auto;
+    display: block;
+}
+
+/* Style de la Navbar flottante */
+.custom-floating-nav {
+    background-color: burlywood !important;
+    border-radius: 50px; /* Donne l'effet "pilule" très moderne */
+    padding: 10px 30px !important;
+    width: auto; /* Elle ne prend que la place nécessaire */
+    flex-grow: 1; /* Elle prend l'espace restant à droite du logo */
+    margin-left: 20px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+/* Ajustement pour que la recherche reste propre */
+.btn-search {
+    border: 2px solid #5d4037;
+    color: #5d4037;
+    border-radius: 20px;
+}
+
+/* Pour le mobile : on s'assure que tout reste aligné */
+@media (max-width: 991px) {
+    .custom-floating-nav {
+        margin-left: 10px;
+        padding: 5px 15px !important;
+    }
+    .custom-logo {
+        height: 60px; /* Plus petit sur mobile */
+    }
+}
